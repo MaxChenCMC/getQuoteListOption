@@ -95,7 +95,7 @@ def append_to_csv(df, filename):
 def data_collection_thread():
     while True:
         try:
-            df = strike_range_code("TX5W5104;", "1", "TXO", "202410W5")
+            df = strike_range_code("TX1W1111;", "1", "TXO", "202411W1")
             if df is not None:
                 append_to_csv(df, 'premium.csv')
                 data_queue.put(True)  # Signal that new data is available
